@@ -1,0 +1,49 @@
+POST http://localhost:3000/api/authenticate
+Content-Type: application/json
+
+{
+    "email":"1.com",
+    "password":"1"
+}
+
+###
+POST http://localhost:3000/api/follow/63452eb2027ca0bf8e3faae0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
+
+
+###
+GET http://localhost:3000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
+
+
+###
+POST http://localhost:3000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
+Content-Type: application/json
+
+{
+    "title":"first post",
+    "content":"this is the first post"
+}
+
+###
+DELETE  http://localhost:3000/api/delete/6345428190578e211e3195fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
+
+###
+POST http://localhost:3000/api/like/6345456895ade69b1b2a6652
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
+
+
+###
+POST http://localhost:3000/api/unlike/6345456895ade69b1b2a6652
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
+
+###
+POST http://localhost:3000/api/comment/6345456895ade69b1b2a6652
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
+Content-Type: application/json
+
+{
+    "content" : "first comment"
+}
