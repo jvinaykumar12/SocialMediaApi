@@ -3,10 +3,9 @@ import request from "supertest";
 import app from "./app.js";
 import dotenv from 'dotenv'
 
-
 dotenv.config()
 beforeAll(async () =>{ mongoose.connect(process.env.MONGO)} )
-describe("testing all api" ,()=>{
+describe("testing all ths api's" ,()=>{
 
     test("testing all apis at once",async ()=>{ 
 
@@ -63,7 +62,10 @@ describe("testing all api" ,()=>{
                                         content : 'this is the first comment'
                                     }) 
         expect(testPostComment.statusCode).toBe(200)  
-        
+
+        const testAllPostsByUser = await request(app).get(`/api/all_posts`)
+                                    .set('Authorization',`Bearer ${jwt}`) 
+        expect(testAllPostsByUser.statusCode).toBe(200)
         
     })
 

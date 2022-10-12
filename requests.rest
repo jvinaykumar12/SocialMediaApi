@@ -48,4 +48,6 @@ Content-Type: application/json
     "content" : "first comment"
 }
 
-
+###
+GET http://localhost:3000/api/all_posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
