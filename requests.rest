@@ -31,7 +31,7 @@ DELETE  http://localhost:3000/api/delete/6345428190578e211e3195fa
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
 
 ###
-POST http://localhost:3000/api/like/6345456895ade69b1b2a6652
+POST http://localhost:3000/api/like/6346b7457fe7c8f883eeb690
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
 
 

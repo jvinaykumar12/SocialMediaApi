@@ -1,0 +1,26 @@
+services:
+  mongo: 
+    image: mongo:latest
+    restart: always
+    ports:
+     - 4000:27017
+    volumes: 
+     - mongodb_volume:/data/db
+
+# NODEJS 
+  api:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3000:3000
+    environment:
+      SECRET_KEY: thisisarandomkeyusedforjwttokengeneration
+      MONGO: mongodb://mongo:27017/reunion
+    depends_on:
+      - mongo
+    
+    
+
+volumes:
+  mongodb_volume: {}

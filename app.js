@@ -24,7 +24,7 @@ app.post('/api/authenticate',async (req,res)=>{
                 id:user._id,
                 email:user.email
             }
-            const accessToken = jwt.sign(temp,'thisisarandomkeyusedforjwttokengeneration')
+            const accessToken = jwt.sign(temp,process.env.SECRET_KEY)
             res.status(200).json({
                 token:accessToken,
                 userDetails:user
@@ -37,7 +37,7 @@ app.post('/api/authenticate',async (req,res)=>{
                 id: newUser._id,
                 email: newUser.email
             }
-            const accessToken = jwt.sign(temp,'thisisarandomkeyusedforjwttokengeneration')
+            const accessToken = jwt.sign(temp,process.env.SECRET_KEY)
             res.status(200).json({
                 token:accessToken,
                 userDetails:newUser
@@ -150,7 +150,7 @@ app.post('/api/like/:id',tokenAuthentication, async(req,res)=>{
     }
 
     catch(e) {
-        res.send(503).send(e)
+        res.status(503).send(e)
     }
 })
 
@@ -178,8 +178,14 @@ app.post('/api/comment/:id',tokenAuthentication, async(req,res)=>{
         })
         await comment.save()
         const post = await postModel.findById(req.params.id)
-        await post.updateOne({$push:{comments : comment}})
-        res.status(200).json(comment)
+        if(post) {
+            await post.updateOne({$push:{comments : comment}})
+            return res.status(200).json(comment)
+        }
+        else {
+            return res.status(403).send("post not found")
+        }
+        
     }
 
     catch(e) {
