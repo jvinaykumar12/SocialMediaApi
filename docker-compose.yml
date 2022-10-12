@@ -10,8 +10,6 @@ services:
 # NODEJS 
   api:
     build: .
-    volumes:
-      - .:/usr/src/app
     ports:
       - 3000:3000
     environment:
