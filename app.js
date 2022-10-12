@@ -24,7 +24,7 @@ app.post('/api/authenticate',async (req,res)=>{
                 id:user._id,
                 email:user.email
             }
-            const accessToken = jwt.sign(temp,process.env.SECRET_KEY)
+            const accessToken = jwt.sign(temp,'thisisarandomkeyusedforjwttokengeneration')
             res.status(200).json({
                 token:accessToken,
                 userDetails:user
@@ -37,7 +37,7 @@ app.post('/api/authenticate',async (req,res)=>{
                 id: newUser._id,
                 email: newUser.email
             }
-            const accessToken = jwt.sign(temp,process.env.SECRET_KEY)
+            const accessToken = jwt.sign(temp,'thisisarandomkeyusedforjwttokengeneration')
             res.status(200).json({
                 token:accessToken,
                 userDetails:newUser
