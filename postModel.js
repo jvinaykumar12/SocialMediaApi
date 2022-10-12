@@ -8,6 +8,9 @@ const schema = mongoose.Schema({
     title:{
         type:String
     },
+    content :{
+        type:String
+    },
     description:{
         type:String
     },
