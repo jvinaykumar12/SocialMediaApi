@@ -1,4 +1,4 @@
-POST http://localhost:3000/api/authenticate
+POST https://socialmedia-q3if.onrender.com/api/authenticate
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwM
 
 
 ###
-POST http://localhost:3000/api/posts
+POST https://socialmedia-q3if.onrender.com/api/posts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDUyZTkwMDI3Y2EwYmY4ZTNmYWFkZCIsImVtYWlsIjoiMS5jb20iLCJpYXQiOjE2NjU0Nzg5ODR9.Lmw4zCacbfK7ibqfL-eh_TFsUXCC3PmivG-uMkLqMok
 Content-Type: application/json
 

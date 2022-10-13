@@ -18,7 +18,7 @@ services:
     depends_on:
       - mongo
     
-    
+#docker compose run api npm test
 
 volumes:
   mongodb_volume: {}
