@@ -5,7 +5,7 @@ COPY package*.json .
 FROM base as test
 RUN npm ci
 COPY . .
-CMD ["npm","run","test"]
+CMD ["npm","start"]
 
 FROM base as prod
 RUN npm ci
