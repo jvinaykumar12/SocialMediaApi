@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+console.log("in userMode")
 
 const schema = mongoose.Schema({
     name:{

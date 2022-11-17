@@ -14,7 +14,7 @@ app.use(cors({
 }))
 
 app.use(express.json())
-
+console.log("in app.js")
 app.post('/api/authenticate',async (req,res)=>{
 
     try{
