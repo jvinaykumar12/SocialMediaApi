@@ -14,3 +14,4 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: docker compose up 
+      - run: npm run test 
