@@ -72,17 +72,7 @@ describe("testing all ths api's" ,()=>{
 
 })
 
-describe("testing all ths api's" ,()=>{
 
-    test("testing all apis at once",async ()=>{ 
-
-        const loginCredentials = await request(app).post("/api/authenticate").send({
-            email : "3.com",
-            password : 3    
-        })
-        expect(loginCredentials.statusCode).toBe(200)
-    })
-})
 
 
 afterAll(async () => {
