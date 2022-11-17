@@ -10,4 +10,4 @@ CMD ["npm","run","test"]
 FROM base as prod
 RUN npm ci
 COPY . .
-CMD ["npm","run"]
+CMD ["npm","run","test"]
