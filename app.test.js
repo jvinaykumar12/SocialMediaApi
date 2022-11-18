@@ -4,7 +4,7 @@ import app from "./app.js";
 import dotenv from 'dotenv'
 
 dotenv.config()
-beforeAll(async () =>{ mongoose.connect('mongodb://localhost:4000/reunion' )} )
+beforeAll(async () =>{ mongoose.connect('mongodb://localhost:4000/reunion')} )
 
 describe("testing all ths api's" ,()=>{
 
